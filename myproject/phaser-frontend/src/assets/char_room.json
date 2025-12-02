@@ -1,0 +1,230 @@
+{
+	"textures": [
+		{
+			"image": "char_room-0.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 960,
+				"h": 633
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 120,
+						"h": 120
+					},
+					"spriteSourceSize": {
+						"x": 35,
+						"y": 21,
+						"w": 47,
+						"h": 93
+					},
+					"frame": {
+						"x": 0,
+						"y": 0,
+						"w": 47,
+						"h": 93
+					}
+				},
+				{
+					"filename": "2.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 120,
+						"h": 120
+					},
+					"spriteSourceSize": {
+						"x": 45,
+						"y": 20,
+						"w": 27,
+						"h": 93
+					},
+					"frame": {
+						"x": 47,
+						"y": 0,
+						"w": 27,
+						"h": 93
+					}
+				},
+				{
+					"filename": "3.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 120,
+						"h": 120
+					},
+					"spriteSourceSize": {
+						"x": 35,
+						"y": 21,
+						"w": 47,
+						"h": 93
+					},
+					"frame": {
+						"x": 74,
+						"y": 0,
+						"w": 47,
+						"h": 93
+					}
+				},
+				{
+					"filename": "4.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 120,
+						"h": 120
+					},
+					"spriteSourceSize": {
+						"x": 45,
+						"y": 20,
+						"w": 28,
+						"h": 93
+					},
+					"frame": {
+						"x": 121,
+						"y": 0,
+						"w": 28,
+						"h": 93
+					}
+				},
+				{
+					"filename": "5-5.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 120,
+						"h": 120
+					},
+					"spriteSourceSize": {
+						"x": 45,
+						"y": 21,
+						"w": 31,
+						"h": 93
+					},
+					"frame": {
+						"x": 149,
+						"y": 0,
+						"w": 31,
+						"h": 93
+					}
+				},
+				{
+					"filename": "5.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 120,
+						"h": 120
+					},
+					"spriteSourceSize": {
+						"x": 38,
+						"y": 21,
+						"w": 47,
+						"h": 93
+					},
+					"frame": {
+						"x": 180,
+						"y": 0,
+						"w": 47,
+						"h": 93
+					}
+				},
+				{
+					"filename": "6.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 120,
+						"h": 120
+					},
+					"spriteSourceSize": {
+						"x": 48,
+						"y": 20,
+						"w": 27,
+						"h": 93
+					},
+					"frame": {
+						"x": 227,
+						"y": 0,
+						"w": 27,
+						"h": 93
+					}
+				},
+				{
+					"filename": "7.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 120,
+						"h": 120
+					},
+					"spriteSourceSize": {
+						"x": 38,
+						"y": 21,
+						"w": 47,
+						"h": 93
+					},
+					"frame": {
+						"x": 254,
+						"y": 0,
+						"w": 47,
+						"h": 93
+					}
+				},
+				{
+					"filename": "8.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 120,
+						"h": 120
+					},
+					"spriteSourceSize": {
+						"x": 47,
+						"y": 20,
+						"w": 28,
+						"h": 93
+					},
+					"frame": {
+						"x": 301,
+						"y": 0,
+						"w": 28,
+						"h": 93
+					}
+				},
+				{
+					"filename": "room background.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 960,
+						"h": 540
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 960,
+						"h": 540
+					},
+					"frame": {
+						"x": 0,
+						"y": 93,
+						"w": 960,
+						"h": 540
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:14fe36e7fda75c0cf34734545b686e00:80952f5f65599089ab0ae3b4d4c89bdb:61dfb886f50e55521382a5f13ec5e8d3$"
+	}
+}
