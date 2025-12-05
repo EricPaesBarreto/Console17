@@ -2,7 +2,7 @@
 FROM ghcr.io/astral-sh/uv:python3.13-bookworm-slim AS uv_base
 
 # pull official base image
-FROM python:3.13-slim-bookworm
+# FROM python:3.13-slim-bookworm
 
 # set work directory
 WORKDIR /app
@@ -11,15 +11,20 @@ WORKDIR /app
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
     UV_LINK_MODE=copy \
-    UV_PYTHON_DOWNLOADS=never \
-    UV_PROJECT_ENVIRONMENT=/app/.venv
+    UV_PYTHON_DOWNLOADS=never 
+    # UV_PROJECT_ENVIRONMENT=/app/.venv
+
+
+# exposes the port
+EXPOSE 8000
+
 
 # install uv
 
 #COPY --from=ghcr.io/astral-sh/uv:python3.13-bookworm-slim /uv /uvx /bin/
 #COPY --from=ghcr.io/astral-sh/uv:python3.13-bookworm-slim /uv /usr/local/bin/uv
-COPY --from=uv_base /usr/local/bin/uv /usr/local/bin/uv
-RUN ln -s /usr/local/bin/uv /usr/local/bin/uvx
+# COPY --from=uv_base /usr/local/bin/uv /usr/local/bin/uv
+# RUN ln -s /usr/local/bin/uv /usr/local/bin/uvx
 
 # Since there's no point in shipping lock files, we move them
 # into a directory that is NOT copied into the runtime image.
@@ -36,3 +41,8 @@ RUN --mount=type=cache,target=/root/.cache \
 
 # copy project
 COPY . .
+
+ENV PATH="/app/.venv/bin:$PATH"
+
+CMD [ "uv", "run", "./myproject/manage.py", "runserver", "0.0.0.0:8000" ]
+
