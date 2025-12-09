@@ -1,0 +1,18 @@
+# Ignore the Python Virtual Environment
+.venv
+venv
+env
+
+# Ignore Node Modules (let Docker install its own)
+node_modules
+
+# Ignore Git history (saves space and time)
+.git
+
+# Ignore Python cache
+__pycache__
+*.pyc
+
+# Ignore OS files
+.DS_Store
+Thumbs.db

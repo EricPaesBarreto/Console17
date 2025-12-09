@@ -1,5 +1,19 @@
 services:
-  web:
-    build: .
+  phaser:
+    build: 
+      context: ./myproject/phaser-frontend
+      dockerfile: ./phaser.Dockerfile
     ports:
-      - "8000:8000"
+      #- "8000:8000"
+      - "5173:5173"
+    
+    develop:
+      watch:
+        - action: sync
+          path: ./myproject/mysite/phaser-frontend
+          target: /src
+          initial_sync: false
+          ignore:
+            - node_modules/
+        - action: rebuild
+          path: myproject/package.json

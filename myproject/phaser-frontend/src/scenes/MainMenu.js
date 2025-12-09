@@ -18,7 +18,7 @@ export default class MainMenu extends Phaser.Scene {
 
         const startBtn = this.add.text(100, 200, 'START GAME', { 
             fontSize: '30px', 
-            fill: '#0f0',
+            fill: 'rgba(255, 143, 188, 1)',
             backgroundColor: '#000',
             padding: { x: 10, y: 5 }
         })
