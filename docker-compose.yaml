@@ -17,3 +17,9 @@ services:
             - node_modules/
         - action: rebuild
           path: myproject/package.json
+  app:
+    build:
+      context: .
+      dockerfile: django.Dockerfile
+    ports:
+      - "8000:8000"

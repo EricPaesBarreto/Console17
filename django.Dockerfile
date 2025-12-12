@@ -1,3 +1,14 @@
+FROM node:25-trixie as phaser
+WORKDIR /app
+
+
+# Copy package.json and package-lock.json (or yarn.lock) first for better caching
+COPY /myproject/phaser-frontent .
+RUN npm install
+
+RUN npm run build
+
+
 #get UV from the official UV container
 FROM ghcr.io/astral-sh/uv:python3.13-bookworm-slim AS uv_base
 
@@ -41,6 +52,8 @@ RUN --mount=type=cache,target=/root/.cache \
 
 # copy project
 COPY . .
+
+COPY --from=phaser /app/static /app/myproject
 
 ENV PATH="/app/.venv/bin:$PATH"
 
