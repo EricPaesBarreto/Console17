@@ -3,7 +3,7 @@ WORKDIR /app
 
 
 # Copy package.json and package-lock.json (or yarn.lock) first for better caching
-COPY /myproject/phaser-frontent .
+COPY /myproject/phaser-frontend .
 RUN npm install
 
 RUN npm run build
