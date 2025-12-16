@@ -5,22 +5,20 @@ export default class Level1 extends Phaser.Scene {
     constructor() {
         super('Level1');
     }
-
+    
     create() {
-        // Background text
-        this.physics.world.setBoundsCollision(true, false, true, true);
-        this.add.text(50, 50, 'Level 1: Go Right ->', { fontSize: '32px', fill: '#fff' });
+        // FIX: Changed 'office_bg.png' to 'office.png' to match JSON
+        let bg = this.add.image(this.scale.width/2, this.scale.height/2, 'game_assets', 'room background.png');
+        
+        let scaleX = this.scale.width / bg.width;
+        let scaleY = this.scale.height / bg.height;
+        bg.setScale(Math.max(scaleX, scaleY));
 
-        // Spawn Player on the LEFT side (100)
-        this.player = new Player(this, 1400, 600);
+        this.player = new Player(this, 100, 480);
     }
 
     update() {
         this.player.update();
-
-        // LOGIC: If player touches RIGHT edge, go to Level 2
-        if (this.player.x > this.scale.width ) {
-            this.scene.start('Level2');
-        }
+        if (this.player.x > this.scale.width - 50) this.scene.start('Level2');
     }
 }

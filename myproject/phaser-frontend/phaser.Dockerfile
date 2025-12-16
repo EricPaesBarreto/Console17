@@ -6,7 +6,7 @@ WORKDIR /app
 COPY package.json package-lock.json ./
 RUN npm install
 
-COPY . .
+COPY . . 
 CMD ["npm", "run", "host"]
 RUN npm run build
 EXPOSE 5173
