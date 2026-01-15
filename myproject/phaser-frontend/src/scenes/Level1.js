@@ -14,7 +14,7 @@ export default class Level1 extends Phaser.Scene {
         let scaleY = this.scale.height / bg.height;
         bg.setScale(Math.max(scaleX, scaleY));
 
-        this.player = new Player(this, 100, 480);
+        this.player = new Player(this, 1500, 480);
     }
 
     update() {

@@ -7,11 +7,16 @@ export default class Level2 extends Phaser.Scene {
     }
 
     create() {
+
+        let bg = this.add.image(this.scale.width/2, this.scale.height/2, 'game_assets', 'office.png');
+        let scaleX = this.scale.width / bg.width;
+        let scaleY = this.scale.height / bg.height;
+        bg.setScale(Math.max(scaleX, scaleY));
         this.physics.world.setBoundsCollision(false, true, true, true);
         this.add.text(50, 50, '<- Level 2: Go Left to Return', { fontSize: '32px', fill: '#0f0' });
         
         // Spawn Player slightly away from the left edge so they don't loop instantly
-        this.player = new Player(this, 100, 600);
+        this.player = new Player(this, 100, 480);
     }
 
     update() {
